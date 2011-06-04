@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.hoatle.dps.gof.abstractfactory.widget.windows;
+package net.hoatle.dps.gof.abstractfactory.widget.win;
 
 import net.hoatle.dps.gof.abstractfactory.widget.ScrollBar;
 
@@ -23,7 +23,7 @@ import net.hoatle.dps.gof.abstractfactory.widget.ScrollBar;
  * @author <a href="http://hoatle.net">hoatle (hoatlevan at gmail dot com)</a>
  * @since Jun 5, 2011
  */
-public final class WindowsScrollBar implements ScrollBar {
+public final class WinScrollBar implements ScrollBar {
 
   /**
    * {@inheritDoc}

@@ -17,7 +17,7 @@ package net.hoatle.dps.gof.abstractfactory.widget;
 
 import net.hoatle.dps.gof.abstractfactory.widget.linux.LinuxWidgetFactory;
 import net.hoatle.dps.gof.abstractfactory.widget.osx.OSXWidgetFactory;
-import net.hoatle.dps.gof.abstractfactory.widget.windows.WindowsWidgetFactory;
+import net.hoatle.dps.gof.abstractfactory.widget.win.WinWidgetFactory;
 
 /**
  * The helper class to get {@link WidgetFactory} based on its environment.
@@ -45,13 +45,13 @@ public class WidgetFactoryHelper {
   public static WidgetFactory getWidgetFactory(ENV env) {
     switch (env) {
       case WINDOWS:
-        return new WindowsWidgetFactory();
+        return new WinWidgetFactory();
       case LINUX:
         return new LinuxWidgetFactory();
       case OSX:
         return new OSXWidgetFactory();
     }
     //Default
-    return new WindowsWidgetFactory();
+    return new WinWidgetFactory();
   }
 }
