@@ -15,31 +15,30 @@
  */
 package net.hoatle.dps.gof.abstractfactory.widget;
 
-import net.hoatle.dps.gof.abstractfactory.widget.linux.LinuxWidgetFactory;
-import net.hoatle.dps.gof.abstractfactory.widget.osx.OSXWidgetFactory;
-import net.hoatle.dps.gof.abstractfactory.widget.win.WinWidgetFactory;
-
 /**
- * The helper class to get {@link WidgetFactory} based on its environment.
+ * The demo Application class to work with the widget lib.
+ * <p/>
+ * Run this demo client application on windows, linux or mac osx will produce corresponding widgets.
  *
  * @author <a href="http://hoatle.net">hoatle (hoatlevan at gmail dot com)</a>
  * @since Jun 5, 2011
  */
-public class WidgetFactoryHelper {
+public class Application {
 
   /**
-   * Gets {@link WidgetFactory} based on its environment.
+   * The main entry point.
    *
-   * @return WidgetFactory a widget factory. If no supported os, returns null.
+   * @param args string arguments.
    */
-  public static WidgetFactory getWidgetFactory() {
-    if (OSUtils.IS_WINDOWS) {
-      return new WinWidgetFactory();
-    } else if (OSUtils.IS_LINUX) {
-      return new LinuxWidgetFactory();
-    } else if (OSUtils.IS_MAC_OSX) {
-      return new OSXWidgetFactory();
+  public static void main(String[] args) {
+    WidgetFactory widgetFactory = WidgetFactoryHelper.getWidgetFactory();
+    if (widgetFactory != null) {
+      Window window = widgetFactory.createWindow();
+      ScrollBar scrollBar = widgetFactory.createScrollBar();
+      window.open();
+      scrollBar.scroll();
+      window.close();
     }
-    return null;
+
   }
 }
