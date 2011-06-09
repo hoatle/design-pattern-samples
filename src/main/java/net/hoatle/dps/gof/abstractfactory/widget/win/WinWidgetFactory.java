@@ -25,7 +25,7 @@ import net.hoatle.dps.gof.abstractfactory.widget.Window;
  * @author <a href="http://hoatle.net">hoatle (hoatlevan at gmail dot com)</a>
  * @since Jun 5, 2011
  */
-public final class WinWidgetFactory extends WidgetFactory {
+public final class WinWidgetFactory implements WidgetFactory {
 
   /**
    * {@inheritDoc}

@@ -21,18 +21,18 @@ package net.hoatle.dps.gof.abstractfactory.widget;
  * @author <a href="http://hoatle.net">hoatle (hoatlevan at gmail dot com)</a>
  * @since Jun 5, 2011
  */
-public abstract class WidgetFactory {
+public interface WidgetFactory {
   /**
    * Creates a scroll bar.
    *
    * @return a {@link ScrollBar} instance.
    */
-  protected abstract ScrollBar createScrollBar();
+  ScrollBar createScrollBar();
 
   /**
    * Creates a window.
    *
    * @return a {@link Window} instance.
    */
-  protected abstract Window createWindow();
+  Window createWindow();
 }
